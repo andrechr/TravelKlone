@@ -47,17 +47,10 @@ class MainActivity : AppCompatActivity() ,
             supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
             when(item.itemId)
             {
-                R.id.nav_home -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.frameLayout, HomeFragment(),null).commit()
-                }
+                R.id.nav_home -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, HomeFragment(),null).commit()
                 R.id.nav_promo -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, PromoFragment(),null).commit()
-                R.id.nav_ticket -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.frameLayout, MyTicketFragment(),null).commit()
-                }
-                R.id.nav_account -> {
-                    supportFragmentManager.beginTransaction().replace(R.id.frameLayout, AccountFragment(),null).commit()
-
-                }
+                R.id.nav_ticket -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, MyTicketFragment(),null).commit()
+                R.id.nav_account -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, AccountFragment(),null).commit()
             }
             return@setOnNavigationItemSelectedListener true
         }
